@@ -13,12 +13,8 @@ module.exports.run = (client, message, args) => {
 
 
   async function getCard(message) {
-    if(isNaN(cardID)){
-    let cardName = await sql.get(`SELECT * FROM name WHERE id = ${cardID}`);
-    let cardRow = await sql.get(`SELECT * FROM cards WHERE id = ${cardName.id}`);
-    } else {
+
     let cardRow = await sql.get(`SELECT * FROM cards WHERE id = ${cardID}`);
-  }
     if (!cardRow) return message.reply("No card found with that ID");
     let Cat = await(sql.get(`SELECT * FROM card_categories ORDER BY id DESC LIMIT 1`));
     //console.log(cardRow);
