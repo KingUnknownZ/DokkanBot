@@ -14,14 +14,8 @@ module.exports.run = (client, message, args) => {
   sql.open("./japan.db");
 
   async function getCard(message) {
-    if(isNaN(cardID)){
-      console.log(cardID + ".")
-    let cardName = await sql.get(`SELECT * FROM name WHERE Card = ${cardID}`);
-    console.log(cardName);
-    let cardRow = await sql.get(`SELECT * FROM cards WHERE id = ${cardName.id}`);
-    } else {
-    let cardRow = await sql.get(`SELECT * FROM cards WHERE id = ${cardID}`);
-  }
+
+    let cardRow = await sql.get(`SELECT * FROM cards WHERE id = ${cardID};`);
     if (!cardRow) return message.reply("No card found with that ID");
     let leaderSkill = "none";
     let passiveSkill = "none";
