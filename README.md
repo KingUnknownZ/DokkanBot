@@ -17,7 +17,7 @@ You need a rooted phone, I prefer using [Nox emulator](https://www.bignox.com/) 
 1. Make sure that the game is updated and has all the data
 2. Download a root explorer 
 3. Go to `data/data/`
-⋅⋅* `com.bandainamcogames.dbzdokkanww` for global
+..* `com.bandainamcogames.dbzdokkanww` for global
 ..* `com.bandainamcogames.dbzdokkan` for Japanese
 4. Open up `files`
 ..* Go to `backup` for the database and then copy it to the main folder then decrypt it
